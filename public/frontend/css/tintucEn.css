@@ -1,0 +1,11 @@
+.title-center p::before {
+    content: 'Press';
+}
+
+.new .title-center p::before {
+    content: 'News';
+}
+
+.banner .text-left p::before {
+    content: 'News';
+}
