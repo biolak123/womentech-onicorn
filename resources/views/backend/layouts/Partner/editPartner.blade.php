@@ -78,7 +78,7 @@
                             <div class="field item form-group">
                                     <label class="col-form-label col-md-3 col-sm-3  label-align">Tiêu đối tác<span class="required">*</span></label>
                                     <div class="col-md-6 col-sm-6">
-                                        <input class="form-control"  placeholder="{{$partner->name_partner}}"  name="title"  required="required" />
+                                        <input class="form-control"  value="{{$partner->name_partner}}"  name="title"  required="required" />
                                     </div>
                                 </div>
 
@@ -87,7 +87,7 @@
                                 <label class="col-form-label col-md-3 col-sm-3  label-align">Hình ảnh đối tác<span class="required">*</span></label>
                                 <div class="col-md-6 col-sm-6">
                                     <input class="form-control" type="file" name="image_partner" />
-                                    <img src="https://womentech.finance/public/backend/images/press/{{$partner->image_partner}}" height="100" width="100" alt="">
+                                    <img src="public/backend/images/partner/{{$partner->image_partner}}" height="100" width="100" alt="">
                                 </div>
                             </div>
 

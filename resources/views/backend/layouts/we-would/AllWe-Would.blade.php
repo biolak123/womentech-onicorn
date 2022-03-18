@@ -127,7 +127,7 @@
                         </td>
                         </tr>
                         <?php
-        $stt++;
+        $stt++; 
         ?>
                         @endforeach
                       </tbody>

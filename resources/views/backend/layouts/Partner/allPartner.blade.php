@@ -113,7 +113,8 @@
                         ?>
                                                 <tr>
                                                     <td>{{$partner->name_partner}}</td>
-                                                    <td>{{$partner->image_partner}}</td>
+                                                    <!-- <td>{{$partner->image_partner}}</td> -->
+                                                    <td><img src="public/backend/images/partner/{{$partner->image_partner}}" height="100" width="100" alt=""></td>
                                                     <td>{{$partner->created_at}}</td>
                                                     <td>
                                                         <div class="fa-hover col-md-3 col-sm-4  "><a

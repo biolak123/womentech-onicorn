@@ -121,6 +121,7 @@ Route::group(['module' => 'dashboard', 'middleware' => 'web', 'namespace' => "Ap
 */
 
 Route::group(['module' => 'user', 'middleware' => 'web', 'namespace' => "App\Http\Controllers"], function () {
+    //English
     Route::get("/news-user", ["as" => "admin.user.index.news", "uses" => "NewsFrontendController@getIndexNewENG"]);
     Route::get("/home-user", ["as" => "admin.user.index.home", "uses" => "NewsFrontendController@getIndexHomeENG"]);
     Route::get("/about-user", ["as" => "admin.user.index.about", "uses" => "NewsFrontendController@getIndexAboutENG"]);
@@ -132,6 +133,7 @@ Route::group(['module' => 'user', 'middleware' => 'web', 'namespace' => "App\Htt
     Route::get("/termofuse-user", ["as" => "admin.user.index.termofuse", "uses" => "NewsFrontendController@getIndexTermofuseENG"]);
     Route::get("/help", ["as" => "admin.user.index.help", "uses" => "NewsFrontendController@getIndexHelp"]);
 
+    //Vietnamese
     Route::get("/news-userVn", ["as" => "admin.user.index.news", "uses" => "NewsFrontendController@getIndexNewVn"]);
     Route::get("/home-userVn", ["as" => "admin.user.index.home", "uses" => "NewsFrontendController@getIndexHomeVn"]);
     Route::get("/about-userVn", ["as" => "admin.user.index.about", "uses" => "NewsFrontendController@getIndexAboutVn"]);
@@ -142,7 +144,7 @@ Route::group(['module' => 'user', 'middleware' => 'web', 'namespace' => "App\Htt
     Route::get("/privacypolicy-userVn", ["as" => "admin.user.index.privacypolicy", "uses" => "NewsFrontendController@getIndexPrivacyPolicyVn"]);
     Route::get("/termofuse-userVn", ["as" => "admin.user.index.termofuse", "uses" => "NewsFrontendController@getIndexTermofuseVn"]);
     Route::get("/HoTro", ["as" => "admin.user.index.help", "uses" => "NewsFrontendController@getIndexHoTro"]);
-   
+    Route::get("/doiTac", ["as" => "admin.user.index.partner", "user" => "NewsFrontendController@getIndexPartnerVn"]);
 
    	
   Route::get("/wta-whitepaper", "WeWouldDashbordController@getIndexpdf");
