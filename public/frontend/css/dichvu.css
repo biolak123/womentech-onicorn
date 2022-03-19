@@ -436,7 +436,7 @@ main {
 .tit button {
     background: #EC4C93;
     border-radius: 5px;
-    font-family: Poppins;
+    font-family: SVN-Poppins !important;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
