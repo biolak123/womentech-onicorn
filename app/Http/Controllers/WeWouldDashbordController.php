@@ -63,7 +63,7 @@ class WeWouldDashbordController extends Controller
             $data['image'] = $new_image;
             DB::table('we_would')->where('id',$id)->update($data);
           
-            return Redirect::route('admin.we-would')->with([ "message" => "Cập nhập we would thành công!"]);;
+            return Redirect::route('admin.we-would')->with([ "message" => "Cập nhập we would thành công!"]);
         }
         DB::table('we_would')->where('id',$id)->update($data);
         return Redirect::route('admin.we-would')->with('message','Cập nhập we would thành công');
