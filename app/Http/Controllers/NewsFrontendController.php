@@ -16,15 +16,24 @@ class NewsFrontendController extends Controller
          $all_press = $all_press->paginate(6);
         return View('frontend.layout.English.news-ENG')->with('news',$all_new)->with('press',$all_press);
     }
-
+    // public function getIndexPartnerHomeENG(){
+    //     $all_partner = DB::table('partner')->select('partner.*')->get();
+    //     $all_partner = $all_partner->orderBy("partner.id","DESC");
+    //     $all_partner = $all_partner->paginate(7);
+    //     // var_dump($all_partner).die();
+      
+    //     return View('frontend.layout.VietNam.home')->with('partner', $all_partner);
+    // }
     public function getIndexHomeENG(){
         $about_us = DB::table('about_us')->get();
         $banner = DB::table('banner_home')->first();
+        $all_partner = DB::table('partner')->get();
         // $all_press = DB::table('press')->select('press.*');
         // $all_press = $all_press->orderBy("press.id","DESC");
         // $all_press = $all_press->paginate(6);
         //var_dump($about_us).die();
-       return View('frontend.layout.English.home-ENG')->with('about',$about_us)->with('banner',$banner);
+  
+       return View('frontend.layout.English.home-ENG')->with('about',$about_us)->with('banner',$banner)->with('partner', $all_partner);
    }
    public function getIndexAboutENG(){
             // $all_new = DB::table('news')->select('news.*');
@@ -104,6 +113,16 @@ public function getIndexNewVn(){
         $all_press = $all_press->paginate(6);
         return View('frontend.layout.Vietnam.TinTuc')->with('news',$all_new)->with('press',$all_press);
 }
+
+//partner in the home page
+public function getIndexPartnerHomeVn(){
+    $all_partner = DB::table('partner')->select('partner.*');
+    $all_partner = $all_partner->orderBy("partner.id","DESC");
+    $all_partner = $all_partner->paginate(10);
+    // var_dump($all_partner).die();
+    return View('frontend.layout.VietNam.home')->with('partner', $all_partner);
+}
+//public function getPartner
 public function getIndexHomeVn(){
     return View('frontend.layout.Vietnam.home');
 }
