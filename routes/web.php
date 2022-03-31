@@ -124,7 +124,6 @@ Route::group(['module' => 'user', 'middleware' => 'web', 'namespace' => "App\Htt
     //English
     Route::get("/news-user", ["as" => "admin.user.index.news", "uses" => "NewsFrontendController@getIndexNewENG"]);
     Route::get("/home-user", ["as" => "admin.user.index.home", "uses" => "NewsFrontendController@getIndexHomeENG"]);
-    // Route::get("/home-user", ["as" => "admin.user.index.home", "uses" => "NewsFrontendController@getIndexPartnerHomeENG"]);
     Route::get("/about-user", ["as" => "admin.user.index.about", "uses" => "NewsFrontendController@getIndexAboutENG"]);
     Route::get("/service-user", ["as" => "admin.user.index.service", "uses" => "NewsFrontendController@getIndexServiceENG"]);
     Route::get("/docthem-user", ["as" => "admin.user.index.docthem", "uses" => "NewsFrontendController@getIndexDocthemENG"]);
